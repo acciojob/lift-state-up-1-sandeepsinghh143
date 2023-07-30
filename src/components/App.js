@@ -5,12 +5,12 @@ import Parent from "./Parent";
 import Child from "./Child";
 
 const App = () => {
-  
+  const[text,setText]=useState("");
   return (
     <div>
         {/* Do not remove the main div */}
-        <Parent>
-          <Child/>
+        <Parent text={text}>
+          <Child setText={setText}/>
         </Parent>
     </div>
   )
